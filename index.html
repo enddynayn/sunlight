@@ -9,14 +9,14 @@
   
   <body>
     
-    <header>
-      <hgroup class="container">
-        <h1>United States Congress</h1>
-        <h2>Browse representatives</h2>
-      </hgroup>
-    </header>
-    
     <div id="main">
+
+      <header>
+        <hgroup class="container">
+          <h1>United States Congress</h1>
+          <h2>Browse representatives</h2>
+        </hgroup>
+      </header>
       
       <article ng-controller="DashboardCtrl" ng-init="getPoliticians()" class="container" ng-cloak>
         
@@ -49,6 +49,8 @@
           </figure>
         </section>
       </article>
+
+      <div id="push"></div>
     
     </div>
     
@@ -61,6 +63,7 @@
     <script>
       function imgError(image) {
           image.onerror = "";
+          image.attribute
           image.src = "images/placeholder.gif";
           return true;
       }

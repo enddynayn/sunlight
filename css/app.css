@@ -1,8 +1,12 @@
+html {
+  height: 100%;
+}
 body {
   font-family: Helvetica, Calibri, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.2em;
   color: #555;
+  height: 100%;
 }
 
 .container {
@@ -15,6 +19,7 @@ header {
   background: #00446a;
   color: #fff;
   padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 header h1 {
@@ -32,7 +37,14 @@ header h2 {
 
 #main {
   background: #eee;
-  padding: 20px 0;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -56px;
+}
+
+#push {
+  height: 56px;
 }
 
 #controls {
@@ -88,6 +100,8 @@ footer {
   padding: 20px;
   box-sizing: border-box;
   text-align: right;
+  margin-top: -56px;
+  background: #fff;
 }
 
 .clearfix:after {
