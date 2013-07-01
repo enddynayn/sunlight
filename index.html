@@ -19,13 +19,16 @@
     <div id="main">
       
       <article ng-controller="DashboardCtrl" ng-init="init()" id="politicians" class="container clearfix">
-        Page {{page}} of {{totalPages}}
-        Total: {{totalCount}}
+        
         <div id="controls">
           <select ng-model="party" ng-options="party for party in parties"></select>
           <select ng-model="state" ng-options="state for state in states"></select>
           <select ng-model="chamber" ng-options="chamber for chamber in chambers"></select>
+          <br>
+          Page {{page}} of {{totalPages}}
+          Total Results: {{totalCount}}
         </div>
+        
         <figure ng-repeat="politician in politicians" class="politician">
           <img src="{{politician.image_path}}" onerror="imgError(this);">
           <figcaption>

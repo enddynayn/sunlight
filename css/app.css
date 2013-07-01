@@ -14,10 +14,7 @@ body {
 header {
   background: #00446a;
   color: #fff;
-}
-
-header hgroup {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 header h1 {
