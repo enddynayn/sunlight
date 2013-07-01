@@ -22,14 +22,14 @@
         
         <div id="controls">
           <div id="results">
-            Showing {{rangeBottom}} of {{rangeTop}}: {{totalCount}}
+            Showing {{rangeBottom}} - {{rangeTop}} of {{totalCount}}
           </div>
           
           <select ng-model="criteria.party" ng-options="party for party in parties"></select>
           <select ng-model="criteria.state" ng-options="state for state in states"></select>
           <select ng-model="criteria.chamber" ng-options="chamber for chamber in chambers"></select>
           
-          <div id="pagination">
+          <div id="pagination" ng-hide="totalPages == 1">
             <a href="" ng-click="criteria.page=criteria.page-1" ng-hide="criteria.page == 1">&laquo; previous</a>
             {{criteria.page}} / {{totalPages}}
             <a href="" ng-click="criteria.page=criteria.page+1" ng-hide="criteria.page == totalPages">next &raquo;</a>

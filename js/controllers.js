@@ -6,7 +6,7 @@ function DashboardCtrl($scope, $http, $location) {
   $scope.parties = ["D", "R", "I"]
   $scope.criteria.party = "D";
 
-  $scope.states = ["RI", "CT", "NH", "CA"]
+  $scope.states = ["AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","PW","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"];
   $scope.criteria.state = "CA";
 
   $scope.chambers = ["house", "senate"]
@@ -28,14 +28,17 @@ function DashboardCtrl($scope, $http, $location) {
   });
 
   $scope.$watch("criteria.party", function(newValue, oldValue){
+    $scope.criteria.page = 1;
     $scope.refreshPoliticians(newValue, oldValue);
   });
 
   $scope.$watch("criteria.state", function(newValue, oldValue){
+    $scope.criteria.page = 1;
     $scope.refreshPoliticians(newValue, oldValue);
   });
 
   $scope.$watch("criteria.chamber", function(newValue, oldValue){
+    $scope.criteria.page = 1;
     $scope.refreshPoliticians(newValue, oldValue);
   });
 
