@@ -36,7 +36,23 @@ header h2 {
 }
 
 #controls {
-  margin-bottom: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#results {
+  color: #333;
+  font-weight: bold;
+  float: right;
+}
+
+#pagination {
+  text-align: right;
+}
+
+#pagination a {
+  text-decoration: none;
+  color: #00446a;
 }
 
 #politicians {
@@ -50,9 +66,10 @@ header h2 {
   width: 200px;
   margin-right: 20px;
   margin-bottom: 20px;
+  height: 280px;
 }
 
-.politician:nth-child(4n+1) {
+.politician:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -80,3 +97,8 @@ footer {
   overflow: hidden;
   display: block;
 }
+
+[ng\:cloak], [ng-cloak], .ng-cloak, .init {
+  display: none !important;
+}
+  
