@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="politicians">
+  <head>
+    <meta charset="utf-8">
+    <title>Politics</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  
+  <body>
+    
+    <header>
+      <hgroup class="container">
+        <h1>United States Congress</h1>
+        <h2>Browse representatives</h2>
+      </hgroup>
+    </header>
+    
+    <div id="main">
+      
+      <article ng-controller="DashboardCtrl" ng-init="init()" id="politicians" class="container clearfix">
+        Page {{page}} of {{totalPages}}
+        Total: {{totalCount}}
+        <div id="controls">
+          <select ng-model="party" ng-options="party for party in parties"></select>
+          <select ng-model="state" ng-options="state for state in states"></select>
+          <select ng-model="chamber" ng-options="chamber for chamber in chambers"></select>
+        </div>
+        <figure ng-repeat="politician in politicians" class="politician">
+          <img src="{{politician.image_path}}" onerror="imgError(this);">
+          <figcaption>
+            {{politician.first_name}} {{politician.last_name}} [{{politician.party}}] - {{politician.state_name}}
+          </figcaption>
+        </figure>
+      </article>
+    
+    </div>
+    
+    <footer>
+      <div class="container">
+        Powered by Angular.js and the Sunlight Foundation API
+      </div>
+    </footer>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
+    
+    <script>
+      function imgError(image) {
+          image.onerror = "";
+          image.src = "images/placeholder.gif";
+          return true;
+      }
+    </script>
+  </body>
+</html>

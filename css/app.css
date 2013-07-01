@@ -1,0 +1,85 @@
+body {
+  font-family: Helvetica, Calibri, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.2em;
+  color: #555;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+  box-sizing: border-box;
+}
+
+header {
+  background: #00446a;
+  color: #fff;
+}
+
+header hgroup {
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  line-height: 1.4em;
+}
+
+header h2 {
+  font-size: 15px;
+  line-height: 1.2em;
+  color: #fff;
+  font-family: "jubilat", Georgia, serif;
+  font-weight: normal;
+}
+
+#main {
+  background: #eee;
+  padding: 20px 0;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+#politicians {
+  padding: 10px;
+}
+
+.politician {
+  padding: 10px;
+  float: left;
+  background: #fff;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.politician:nth-child(4n+1) {
+  margin-right: 0;
+}
+
+.politician img {
+  background: #fff;
+  width: 200px;
+  height: 250px;
+}
+
+.politician figcaption {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.clearfix:after {
+  content: '.';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
