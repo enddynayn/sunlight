@@ -21,7 +21,7 @@
       <article ng-controller="DashboardCtrl" ng-init="getPoliticians()" class="container" ng-cloak>
         
         <div id="controls">
-          <div id="results">
+          <div id="results" ng-hide="totalCount == 0">
             Showing {{rangeBottom}} - {{rangeTop}} of {{totalCount}}
           </div>
           
@@ -37,7 +37,7 @@
         </div>
 
         <div id="no-results" ng-hide="politicians.length">
-          <p>No representatives for "{{criteria.party}}" "{{criteria.state}}" "{{criteria.chamber}}".</p>
+          <p>There are no [{{criteria.party}}] {{criteria.chamber}} representatives for {{criteria.state}}.</p>
         </div>
 
         <section id="politicians" class="clearfix">

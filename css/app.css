@@ -58,6 +58,10 @@ header h2 {
   float: right;
 }
 
+#no-results {
+  padding: 10px;
+}
+
 #pagination {
   text-align: right;
 }
