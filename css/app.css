@@ -1,25 +1,27 @@
 html {
   height: 100%;
 }
+
 body {
+  color: #555;
   font-family: Helvetica, Calibri, Arial, sans-serif;
+  height: 100%;
   font-size: 13px;
   line-height: 18px;
-  color: #555;
-  height: 100%;
 }
 
 .container {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   margin: 0 auto;
   width: 960px;
-  box-sizing: border-box;
 }
 
 header {
   background: #00446a;
   color: #fff;
-  padding: 20px 0;
   margin-bottom: 20px;
+  padding: 20px 0;
 }
 
 header h1 {
@@ -28,34 +30,31 @@ header h1 {
 }
 
 header h2 {
-  font-size: 15px;
-  line-height: 22px;
   color: #fff;
-  font-family: "jubilat", Georgia, serif;
+  font-size: 15px;
+  font-family: 'jubilat', Georgia, serif;
   font-weight: normal;
+  line-height: 22px;
 }
 
 #main {
   background: #eee;
-  min-height: 100%;
   height: auto !important;
   height: 100%;
   margin-bottom: -56px;
-}
-
-#push {
-  height: 56px;
+  min-height: 100%;
 }
 
 #controls {
-  padding: 0 10px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 10px;
 }
 
 #results {
   color: #333;
-  font-weight: bold;
   float: right;
+  font-weight: bold;
 }
 
 #no-results {
@@ -67,8 +66,8 @@ header h2 {
 }
 
 #pagination a {
-  text-decoration: none;
   color: #00446a;
+  text-decoration: none;
 }
 
 #politicians {
@@ -76,13 +75,13 @@ header h2 {
 }
 
 .politician {
-  padding: 10px;
-  float: left;
   background: #fff;
-  width: 200px;
+  float: left;
+  height: 280px;
   margin-right: 20px;
   margin-bottom: 20px;
-  height: 280px;
+  padding: 10px;
+  width: 200px;
 }
 
 .politician:nth-child(4n) {
@@ -91,29 +90,34 @@ header h2 {
 
 .politician img {
   background: #fff;
-  width: 200px;
   height: 250px;
+  width: 200px;
 }
 
 .politician figcaption {
   text-align: center;
 }
 
+#footer-push {
+  height: 56px;
+}
+
 footer {
-  border-top: 1px solid #ddd;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: right;
-  margin-top: -56px;
   background: #fff;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-top: -56px;
+  padding: 20px;
+  text-align: right;
 }
 
 .clearfix:after {
-  content: '.';
   clear: both;
+  content: '.';
+  display: block;
   height: 0;
   overflow: hidden;
-  display: block;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak, .init {
