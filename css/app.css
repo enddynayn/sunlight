@@ -4,7 +4,7 @@ html {
 body {
   font-family: Helvetica, Calibri, Arial, sans-serif;
   font-size: 13px;
-  line-height: 1.2em;
+  line-height: 18px;
   color: #555;
   height: 100%;
 }
@@ -24,12 +24,12 @@ header {
 
 header h1 {
   font-size: 24px;
-  line-height: 1.4em;
+  line-height: 32px;
 }
 
 header h2 {
   font-size: 15px;
-  line-height: 1.2em;
+  line-height: 22px;
   color: #fff;
   font-family: "jubilat", Georgia, serif;
   font-weight: normal;
