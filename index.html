@@ -18,38 +18,7 @@
         </hgroup>
       </header>
       
-      <article ng-controller="DashboardCtrl" ng-init="getPoliticians()" class="container" ng-cloak>
-        
-        <div id="controls">
-          <div id="results" ng-hide="totalCount == 0">
-            Showing {{rangeBottom}} - {{rangeTop}} of {{totalCount}}
-          </div>
-          
-          <select ng-model="criteria.party" ng-options="party for party in parties"></select>
-          <select ng-model="criteria.state" ng-options="state for state in states"></select>
-          <select ng-model="criteria.chamber" ng-options="chamber for chamber in chambers"></select>
-          
-          <div id="pagination" ng-hide="totalPages == 1">
-            <a href="" ng-click="criteria.page=criteria.page-1" ng-hide="criteria.page == 1">&laquo; previous</a>
-            {{criteria.page}} / {{totalPages}}
-            <a href="" ng-click="criteria.page=criteria.page+1" ng-hide="criteria.page == totalPages">next &raquo;</a>
-          </div>
-        </div>
-
-        <div id="no-results" ng-hide="politicians.length">
-          <p>There are no [{{criteria.party}}] {{criteria.chamber}} representatives for {{criteria.state}}.</p>
-        </div>
-
-        <section id="politicians" class="clearfix">
-          <figure ng-repeat="politician in politicians" class="politician">
-            <img ng-src="{{politician.image_path}}" onerror="imgError(this);">
-            <figcaption>
-              {{politician.first_name}} {{politician.last_name}} [{{politician.party}}] - {{politician.state_name}}
-            </figcaption>
-          </figure>
-        </section>
-
-      </article>
+      <div ng-view></div>
 
       <div id="footer-push"></div>
     
@@ -72,9 +41,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
     
   </body>
 </html>
